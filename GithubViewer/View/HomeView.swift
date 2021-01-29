@@ -13,15 +13,15 @@ struct HomeView: View {
     var body: some View {
         VStack{
             HStack {
-                Text("Author").border(Color.black)
-                Text("Commit Hash").border(Color.black)
-                Text("Commit Message").border(Color.black)
-            }
+                Text("Author").frame(maxWidth:.infinity).border(Color.black)
+                Text("Commit Hash").frame(maxWidth:.infinity).border(Color.black)
+                Text("Message").frame(maxWidth:.infinity).border(Color.black)
+            }.frame(maxWidth: .infinity)
             ForEach(self.homeVM.commitData, id:\.sha) {
                 commitData in
-                CommitRow(commitData: commitData)
+                CommitRow(commitData: commitData).frame(maxWidth:.infinity)
             }
-        }
+        }.frame(maxWidth:.infinity)
         
         
     }
