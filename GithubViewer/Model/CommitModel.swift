@@ -11,19 +11,19 @@ struct CommitData:Decodable{
     var sha:String
     var commit:Commit
     var url:URL
-    var commentCount:Int
 }
 
 
 struct Commit:Decodable {
     var author:Author
     var message:String
+    var commentCount:Int
 }
 
 struct Author:Decodable{
     var name:String
     var email:String
-    var date:Date
+    var date:String
 }
 
 
