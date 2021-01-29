@@ -14,6 +14,7 @@
 		A1C5F29425C3B97D00BA95F0 /* GithubViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C5F29325C3B97D00BA95F0 /* GithubViewerUITests.swift */; };
 		A1C5F2B325C418D200BA95F0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C5F2B225C418D200BA95F0 /* HomeView.swift */; };
 		A1C5F2BB25C436BA00BA95F0 /* CommitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C5F2BA25C436BA00BA95F0 /* CommitModel.swift */; };
+		A1C5F2C025C49FCD00BA95F0 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C5F2BF25C49FCD00BA95F0 /* Utility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		A1C5F29525C3B97D00BA95F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1C5F2B225C418D200BA95F0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A1C5F2BA25C436BA00BA95F0 /* CommitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitModel.swift; sourceTree = "<group>"; };
+		A1C5F2BF25C49FCD00BA95F0 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 		A1C5F2A825C409BC00BA95F0 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				A1C5F2BF25C49FCD00BA95F0 /* Utility.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1C5F2C025C49FCD00BA95F0 /* Utility.swift in Sources */,
 				A1C5F2BB25C436BA00BA95F0 /* CommitModel.swift in Sources */,
 				A1C5F27725C3B97A00BA95F0 /* GithubViewerApp.swift in Sources */,
 				A1C5F2B325C418D200BA95F0 /* HomeView.swift in Sources */,

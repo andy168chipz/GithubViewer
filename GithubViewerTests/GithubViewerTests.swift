@@ -8,6 +8,7 @@
 import XCTest
 @testable import GithubViewer
 
+
 class GithubViewerTests: XCTestCase {
 
     override func setUpWithError() throws {
@@ -28,6 +29,10 @@ class GithubViewerTests: XCTestCase {
         self.measure {
             // Put the code you want to measure the time of here.
         }
+    }
+    
+    func testUtilDate() {
+        XCTAssert(true)
     }
 
 }
