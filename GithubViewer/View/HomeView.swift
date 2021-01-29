@@ -8,9 +8,14 @@
 import SwiftUI
 
 struct HomeView: View {
+    @ObservedObject var homeVM = HomeViewModel()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ForEach(self.homeVM.commitData, id:\.sha) {
+            commitData in
+            CommitRow(commitData: commitData)
+        }
+        
     }
 }
 
