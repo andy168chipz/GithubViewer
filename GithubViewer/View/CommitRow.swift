@@ -13,10 +13,12 @@ struct CommitRow: View {
     
     //Displays those commits in a list with the author, commit hash, and commit message
     var body: some View {
-        HStack {
-            Text(commitData.commit.author.name).frame(maxWidth:.infinity).border(Color.black)
-            Text(commitData.sha).frame(maxWidth:.infinity).border(Color.black)
-            Text(commitData.commit.message).frame(maxWidth:.infinity).border(Color.black)
-        }.frame(maxWidth:.infinity)
+        VStack {
+            Text(commitData.commit.message).frame(maxWidth:.infinity, alignment: .leading).padding(.horizontal, 8)
+            HStack {
+                Text(commitData.commit.author.name)
+                Text(commitData.sha).frame(maxWidth:.infinity)
+            }.padding(.horizontal, 8)
+        }.frame(maxWidth:.infinity).border(Color.black)
     }
 }
