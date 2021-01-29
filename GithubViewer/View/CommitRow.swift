@@ -19,6 +19,6 @@ struct CommitRow: View {
                 Text(commitData.commit.author.name).font(.system(size:12))
                 Text(commitData.sha).frame(maxWidth:.infinity).font(.system(size:10))
             }.padding(EdgeInsets(top: 0, leading: 8, bottom: 8, trailing: 8))
-        }.frame(maxWidth:.infinity).border(Color.black)
+        }.frame(maxWidth:.infinity).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.black, lineWidth: 1).foregroundColor(.white)).padding(.horizontal,8)
     }
 }
