@@ -11,10 +11,18 @@ struct HomeView: View {
     @ObservedObject var homeVM = HomeViewModel()
     
     var body: some View {
-        ForEach(self.homeVM.commitData, id:\.sha) {
-            commitData in
-            CommitRow(commitData: commitData)
+        VStack{
+            HStack {
+                Text("Author").border(Color.black)
+                Text("Commit Hash").border(Color.black)
+                Text("Commit Message").border(Color.black)
+            }
+            ForEach(self.homeVM.commitData, id:\.sha) {
+                commitData in
+                CommitRow(commitData: commitData)
+            }
         }
+        
         
     }
 }
