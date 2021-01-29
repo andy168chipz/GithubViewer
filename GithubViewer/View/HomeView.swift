@@ -20,7 +20,7 @@ struct HomeView: View {
                 }
             }.frame(maxWidth:.infinity)
             
-        }
+        }.padding(.top, 8)
         
         
     }
