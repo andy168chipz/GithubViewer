@@ -51,5 +51,11 @@ class GithubViewerTests: XCTestCase {
         dateFormatter.dateFormat = "h:mm a"
         XCTAssertTrue(dateString == dateFormatter.string(from: today))
     }
+    
+    func testUtilFutureDate() {
+        let date = ISO8601DateFormatter().date(from: "2119-01-28T20:34:39Z")!
+        let dateString = Utility.timeFormatter(date: date)
+        XCTAssertTrue(dateString == "")
+    }
 
 }
