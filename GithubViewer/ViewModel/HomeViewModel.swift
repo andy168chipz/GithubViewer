@@ -14,6 +14,7 @@ class HomeViewModel: ObservableObject {
     
     @Published var commitData:[CommitData] = [CommitData]()
     @Published var isLoading = false
+    @Published var hasError = false
     
     init() {
         loadCommits(url: API_ENDPOINT)
@@ -25,11 +26,18 @@ class HomeViewModel: ObservableObject {
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             do {
-                
+                let commits = try decoder.decode([CommitData].self,from:data!)
+                DispatchQueue.main.async {
+                    self.commitData = commits
+                    self.isLoading = false
+                }
             } catch {
-                
+                print("API Call error: \(error)")
+                DispatchQueue.main.async{
+                    self.isLoading = false
+                    self.hasError = true
+                }
             }
-            
         }.resume()
     }
 }
