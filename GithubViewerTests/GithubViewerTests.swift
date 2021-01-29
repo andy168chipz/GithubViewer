@@ -31,11 +31,25 @@ class GithubViewerTests: XCTestCase {
         }
     }
     
-    func testUtilDate() {
+    func testUtilDateDay() {
         let date = ISO8601DateFormatter().date(from: "2021-01-28T20:34:39Z")!
         let dateString = Utility.timeFormatter(date: date)
         XCTAssertTrue(dateString == "Thursday")
-        
+    }
+    
+    func testUtilDateMMDDyyyy() {
+        let date = ISO8601DateFormatter().date(from: "2019-01-28T20:34:39Z")!
+        let dateString = Utility.timeFormatter(date: date)
+        XCTAssertTrue(dateString == "01/28/19")
+    }
+    
+    func testUtilDateToday() {
+        let today = Date()
+        let dateString = Utility.timeFormatter(date: today)
+        sleep(2)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "h:mm a"
+        XCTAssertTrue(dateString == dateFormatter.string(from: today))
     }
 
 }
