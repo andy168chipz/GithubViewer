@@ -33,7 +33,10 @@ class GithubViewerTests: XCTestCase {
     
     func testUtilDate() {
         XCTAssert(true)
-        Utility.timeFormatter(date: Date())
+        let date = ISO8601DateFormatter().date(from: "2021-01-29T20:34:39Z")!
+        let dateString = Utility.timeFormatter(date: date)
+        XCTAssertTrue(dateString == "Friday")
+        
     }
 
 }
