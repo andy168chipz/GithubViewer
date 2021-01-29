@@ -33,6 +33,7 @@ class GithubViewerTests: XCTestCase {
     
     func testUtilDate() {
         XCTAssert(true)
+        Utility.timeFormatter(date: Date())
     }
 
 }
